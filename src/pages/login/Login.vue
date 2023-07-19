@@ -9,7 +9,7 @@
               align-tabs="center"
             >
               <v-tab value="one">{{$t('Login.Login')}}</v-tab>
-              <v-tab value="two">Item Two</v-tab>
+              <v-tab value="two">{{$t('Login.Signup')}}</v-tab>
             </v-tabs>
 
             <v-card-text>
@@ -48,7 +48,7 @@
                       type="submit"
                       variant="elevated"
                     >
-                      Sign In
+                      {{$t('Login.Login')}}
                     </v-btn>
                   </v-form>
                 </v-window-item>
@@ -75,6 +75,7 @@
                       clearable
                       label="Password"
                       placeholder="Enter your password"
+                      type="password"
                     ></v-text-field>
 
                     <br>
@@ -88,7 +89,7 @@
                       type="submit"
                       variant="elevated"
                     >
-                      Sign In
+                      {{$t('Login.Signup')}}
                     </v-btn>
                   </v-form>
                 </v-window-item>

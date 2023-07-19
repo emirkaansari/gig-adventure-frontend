@@ -1,7 +1,8 @@
 {
-  "Login": {
-    "Login": "Login",
-    "Signup": "Signup",
-    "message": ""
+  "en": {
+    "Login": {
+      "Login": "Log In",
+      "Signup": "Sign Up"
+    }
   }
 }
