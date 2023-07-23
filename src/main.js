@@ -7,7 +7,8 @@
 // Components
 import App from './App.vue'
 import { createI18n } from 'vue-i18n';
-import messages from './messages.json'; // Replace with the actual path
+import messages from './messages.json';
+import store from './store/store';
 
 // Composables
 import { createApp } from 'vue'
@@ -25,4 +26,5 @@ const i18n = createI18n({
 registerPlugins(app)
 
 app.use(i18n)
+app.use(store)
 app.mount('#app')
