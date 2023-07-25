@@ -103,6 +103,10 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
+import {REGISTER_USER} from "@/pages/login/store/action-types";
+import {createNamespacedHelpers} from "vuex";
+createNamespacedHelpers("/pages/login")
 export default {
   data() {
     return {
@@ -113,7 +117,17 @@ export default {
       loading: false,
     };
   },
+  computed: {
+    ...mapGetters({
+      registerInfo: "getRegisterInfo"
+    }),
+  },
+
   methods: {
+    ...mapActions({
+      registerUser: REGISTER_USER,
+    }),
+
     onSubmitLogin () {
       if (!this.form) return
 
@@ -122,6 +136,7 @@ export default {
       setTimeout(() => (this.loading = false), 2000)
     },
     onSubmitSignUp () {
+      this.registerUser("yes")
       if (!this.form) return
 
       this.loading = true
